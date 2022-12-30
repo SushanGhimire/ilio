@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const withPWA = require("next-pwa")
+
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -17,11 +19,16 @@ const nextConfig = {
         issuer: /\.[jt]sx?$/,
         resourceQuery: { not: [/url/] },
         use: [{ loader: "@svgr/webpack", options: { icon: true } }]
-      },
-      
+      }
     )
     return config
-  },
+  }
 }
-
+module.exports = withPWA({
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true
+  }
+})
 module.exports = nextConfig
