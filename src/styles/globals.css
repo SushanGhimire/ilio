@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+:root{
+  --primary: 255 56 92 ;
+  /* content  */
+  --content-primary:0 0 0;
+  --content-secondary:72 85 98;
+  --content-success:44 165 81;
+  --bg-gray:238 241 246;
+}
+}
